@@ -1,10 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+
+  const handleOpenCamera = () => {
+    console.log("Camera opened!")
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Button title="Open Camera" onPress={handleOpenCamera} />
       <StatusBar style="auto" />
     </View>
   );
